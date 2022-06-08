@@ -7,12 +7,10 @@ fetch("https://dummyjson.com/products")
     const dataArray = Object.entries(data.products);
     dataArray.forEach((product) => {
       const card = cardTemplate.content.cloneNode(true).children[0];
-      // const card = cardTemplate.content.childNodes[1];
       const header = card.querySelector(".header");
       const body = card.querySelector(".body");
       header.textContent = product[1].title;
-      body.textContenet = product[1].brand;
-      cardContainer.append(header);
-      cardContainer.append(body);
+      body.textContent = product[1].brand;
+      cardContainer.append(card);
     });
   });
