@@ -20,6 +20,6 @@
   justify-content: center;
 }
 
-.hidden {
+.card.hidden {
   display: none;
 }
